@@ -1,12 +1,11 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 
 const SecondPage = () => (
   <Layout>
     <h1>About</h1>
-    <Link to="/">Go back to the homepage</Link>
+    <p>I am a full-stack developer living in Berlin. I have experience in retail and online-advertising industries.</p>
   </Layout>
 )
 
