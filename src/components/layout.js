@@ -1,25 +1,27 @@
-import React from 'react'
-import { Link } from "gatsby"
-import Footer from './Footer'
+import React from 'react';
+import Helmet from 'react-helmet';
+import styled from 'styled-components';
+import Footer from './Footer';
+import Header from './Header';
 
-const ListLink = props => (
-  <li style={{ display: `inline-block`, marginRight: `1rem` }}>
-    <Link to={props.to}>{props.children}</Link>
-  </li>
-)
+const Main = styled.main`
+  max-width: 960px;
+  margin: 60px auto;
+  min-height: 70vh;
+  padding: 100px 5% 80px;
+`;
 
 export default ({ children }) => (
-  <div style={{ margin: `0 auto`, maxWidth: 650, padding: `0 1rem` }}>
-      <header style={{ marginBottom: `1.5rem` }}>
-      <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
-        <h3 style={{ display: `inline` }}>Alexandra Strekalova</h3>
-      </Link>
-      <ul style={{ listStyle: `none`, float: `right` }}>
-        <ListLink to="/about/">About</ListLink>
-        <ListLink to="/contact/">Contact</ListLink>
-      </ul>
-    </header>
-    {children}
+  <div>
+    <Helmet
+      title="Alexandra Strekalova"
+      meta={[
+        { name: 'description', content: 'Sample' },
+        { name: 'keywords', content: 'sample, something' },
+      ]}
+    />
+    <Header />
+    <Main>{children}</Main>
     <Footer />
   </div>
 )

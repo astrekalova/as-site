@@ -1,6 +1,27 @@
 import Typography from "typography"
-import theme from 'typography-theme-parnassus'
 
-const typography = new Typography(theme)
+const options = {
+    baseFontSize: '18px',
+    baseLineHeight: 1.45,
+    scaleRatio: 2.25,
+    bodyColor: '#FFF',
+    headerFontFamily: ['Lato', 'sans-serif'],
+    bodyFontFamily: ['Lato', 'sans-serif'],
+    overrideStyles: ({ rhythm, scale }, options) => ({
+      body: {
+        background: '#111',
+        lineHeight: '1.5',
+      },
+      a: {
+        color: '#f1c40f',
+        textDecoration: 'none',
+      },
+      p: {
+        fontSize: '24px',
+      }
+    }),
+  };
+
+const typography = new Typography(options)
 
 export default typography
