@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from "gatsby"
+import Footer from './Footer'
 
 const ListLink = props => (
   <li style={{ display: `inline-block`, marginRight: `1rem` }}>
@@ -19,5 +20,6 @@ export default ({ children }) => (
       </ul>
     </header>
     {children}
+    <Footer />
   </div>
 )
