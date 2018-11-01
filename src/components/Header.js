@@ -48,10 +48,46 @@ const NavLink = styled(Link)`
   }
 `
 
+const Logo = styled.span`
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 1px;
+  background: #f1c40f;
+  color: #111;
+  padding: 10px;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  font-size: 26px;
+  height: 52px;
+  width: 60px;
+  display: block;
+`;
+
+const Name = styled.h1`
+  margin: 0;
+  top: 0;
+  position: absolute;
+  display:none;
+  z-index: 5;
+  transform: translate3d(-100%, 0, 0);
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 5px;
+  font-size: 24px;
+  text-decoration: none;
+  font-weight: 900;
+  line-height: 52px;
+  color:#FFF;
+  transition: 0.3s all cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  ${media.tablet`display: block;`}
+`;
+
 export default () => (
     <SiteHeader>
       <Link to="/">
-        <h3>Alexandra Strekalova</h3>
+        <Logo>AS</Logo>
+        <Name>Alexandra Strekalova</Name>
       </Link>
       <SiteNav>
         <ul>
