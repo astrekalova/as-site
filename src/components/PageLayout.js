@@ -11,6 +11,10 @@ const Main = styled.main`
   padding: 100px 5% 80px;
 `;
 
+export const Heading = styled.h1`
+  color: ${props => props.color};
+`
+
 export default ({ children }) => (
   <div>
     <Helmet

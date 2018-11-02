@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { media } from './Breakpoints'
+import { logoColor, aboutColor, contactColor } from '../utils/color'
 
 const SiteHeader = styled.header`
   display: flex;
@@ -52,7 +53,7 @@ const Logo = styled.span`
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 1px;
-  background: #f1c40f;
+  background: ${logoColor};
   color: #111;
   padding: 10px;
   position: relative;
@@ -92,12 +93,12 @@ export default () => (
       <SiteNav>
         <ul>
           <li>
-            <NavLink underline="#16a085" to="/about">
+            <NavLink underline={aboutColor} to="/about">
               About
             </NavLink>
           </li>
           <li>
-            <NavLink underline="#2980b9" to="/contact">
+            <NavLink underline={contactColor} to="/contact">
               Contact
             </NavLink>
           </li>

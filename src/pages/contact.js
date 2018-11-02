@@ -1,12 +1,16 @@
 import React from "react"
-import Layout from '../components/PageLayout'
+import styled from 'styled-components';
+
+import Layout, { Heading } from '../components/PageLayout'
+import { contactColor } from '../utils/color'
+
+const EmailLink = styled.span`
+  color: ${contactColor}
+`
 
 export default () => (
   <Layout>
-    <div>
-        <h1>Contact</h1>
-        <p>I'd love to talk! Email me at the address below</p>
-        <a href="mailto:me@example.com">me@example.com</a>
-    </div>
+      <Heading color={contactColor}>Contact</Heading>
+      <p><a href="mailto:strekalo@gmail.com"><EmailLink>Email</EmailLink></a> me, I'd love to talk!</p>
   </Layout>
 )

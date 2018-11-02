@@ -1,10 +1,11 @@
 import React from 'react'
 
-import Layout from '../components/PageLayout'
+import Layout, { Heading } from '../components/PageLayout'
+import { aboutColor } from '../utils/color'
 
 const SecondPage = () => (
   <Layout>
-    <h1>About</h1>
+    <Heading color={aboutColor}>About</Heading>
     <p>I am a full-stack developer living in Berlin. I have experience in retail and online-advertising industries.</p>
   </Layout>
 )
