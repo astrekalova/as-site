@@ -20,10 +20,10 @@ export default ({ children }) => (
     <Helmet
       title="Alexandra Strekalova"
       meta={[
-        { name: 'description', content: 'Sample' },
+        { name: 'description', content: 'Personal site of Alexandra Strekalova' },
         { name: 'keywords', content: 'sample, something' },
       ]}
-    />
+      />
     <Header />
     <Main>{children}</Main>
     <Footer />

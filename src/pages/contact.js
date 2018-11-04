@@ -1,7 +1,7 @@
 import React from "react"
 import styled from 'styled-components';
 
-import Layout, { Heading } from '../components/PageLayout'
+import Layout from '../components/PageLayout'
 import { contactColor } from '../utils/color'
 
 const EmailLink = styled.span`
@@ -10,7 +10,7 @@ const EmailLink = styled.span`
 
 export default () => (
   <Layout>
-      <Heading color={contactColor}>Contact</Heading>
+      <h1>Contact</h1>
       <p><a href="mailto:strekalo@gmail.com"><EmailLink>Email</EmailLink></a> me, I'd love to talk!</p>
   </Layout>
 )
