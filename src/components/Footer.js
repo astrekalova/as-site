@@ -13,6 +13,11 @@ const FooterLinks = [
     link: 'https://github.com/astrekalova',
     color: '#4183c4',
   },
+  {
+    name: 'LinkedIn',
+    link: 'https://www.linkedin.com/in/alexandra-strekalova-a1a78aa6/',
+    color: '#1078b3',
+  },
 ]
 
 const SocialLinks = styled.ul`
