@@ -34,7 +34,7 @@ const SiteNav = styled.nav`
 const NavLink = styled(Link)`
   text-decoration: none;
   color: #fff;
-  font-size: 14px;
+  font-size: 18px;
   padding: 15px 10px 18px;
   font-weight: 900;
   text-transform: uppercase;

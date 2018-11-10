@@ -5,8 +5,8 @@ const options = {
     baseLineHeight: 1.45,
     scaleRatio: 2.25,
     bodyColor: '#FFF',
-    headerFontFamily: ['Lato', 'sans-serif'],
-    bodyFontFamily: ['Lato', 'sans-serif'],
+    headerFontFamily: ['Exo', 'sans-serif'],
+    bodyFontFamily: ['Yrsa', 'sans-serif'],
     overrideStyles: ({ rhythm, scale }, options) => ({
       body: {
         background: '#111',
