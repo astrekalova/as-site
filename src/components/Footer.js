@@ -38,7 +38,7 @@ const SocialLinks = styled.ul`
 `
 
 const SocialLink = styled.a`
-  padding: 5px 8px;
+  padding: 5px 15px;
   border-radius: 3px;
   transition: all 0.3s ease;
   color: #fff;
@@ -47,7 +47,7 @@ const SocialLink = styled.a`
 const SubHeader = styled.h3`
   text-transform: uppercase;
   font-weight: 900;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   letter-spacing: 5px;
   text-align: center;
   font-size: 1.17em;
@@ -64,7 +64,7 @@ export default () => (
             rel="nofollow"
             href={link.link}
             >
-            <FontAwesomeIcon icon={['fab', `${link.name}`]} size="2x" />
+            <FontAwesomeIcon icon={['fab', `${link.name}`]} size="lg" />
             </SocialLink>
         </li>
         ))}
