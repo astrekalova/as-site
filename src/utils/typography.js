@@ -9,7 +9,7 @@ const options = {
     bodyFontFamily: ['Yrsa', 'sans-serif'],
     overrideStyles: ({ rhythm, scale }, options) => ({
       body: {
-        background: '#111',
+        background: '#1a1a1a',
         lineHeight: '1.5',
       },
       a: {

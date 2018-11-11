@@ -1,20 +1,26 @@
 import React from 'react'
 import styled from 'styled-components'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+
 import { media } from './Breakpoints'
+
+library.add(fab)
 
 const FooterLinks = [
   {
-    name: 'Twitter',
+    name: 'twitter',
     link: 'https://twitter.com/astrekalova',
     color: '#00aced',
   },
   {
-    name: 'Github',
+    name: 'github',
     link: 'https://github.com/astrekalova',
-    color: '#4183c4',
+    color: '#30a64a',
   },
   {
-    name: 'LinkedIn',
+    name: 'linkedin',
     link: 'https://www.linkedin.com/in/alexandra-strekalova-a1a78aa6/',
     color: '#1078b3',
   },
@@ -62,7 +68,7 @@ export default () => (
             color={link.color}
             href={link.link}
             >
-            {link.name}
+            <FontAwesomeIcon icon={['fab', `${link.name}`]} />
             </SocialLink>
         </li>
         ))}
