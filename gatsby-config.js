@@ -3,27 +3,21 @@ module.exports = {
     title: 'Gatsby Default Starter',
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-plugin-react-helmet`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        icon: `src/images/favicon-32x32.png`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: 'images',
+        path: '${__dirname}/src/images',
       },
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    'gatsby-plugin-offline',
-    `gatsby-plugin-styled-components`,
+    'gatsby-plugin-styled-components',
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: 'gatsby-plugin-typography',
       options: {
-        pathToConfigModule: `src/utils/typography.js`,
+        pathToConfigModule: 'src/utils/typography.js',
       },
     },
   ],
