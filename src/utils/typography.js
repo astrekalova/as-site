@@ -13,7 +13,6 @@ const options = {
         lineHeight: '1.5',
       },
       a: {
-        color: '#f1c40f',
         textDecoration: 'none',
       },
       p: {
