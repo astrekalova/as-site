@@ -31,6 +31,5 @@ export default ({ children }) => (
     <link rel="canonical" href="https://alexandrastrekalova.com/" />
     <Header />
     <Main>{children}</Main>
-    <Footer />
   </div>
 )
