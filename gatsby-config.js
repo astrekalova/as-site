@@ -1,7 +1,4 @@
 module.exports = {
-  siteMetadata: {
-    title: 'Gatsby Default Starter',
-  },
   plugins: [
     'gatsby-plugin-react-helmet',
     {
@@ -11,8 +8,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-typography',
