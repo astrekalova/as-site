@@ -1,20 +1,10 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import styled from 'styled-components';
 import Header from './Header';
 
 import logo from "../images/favicon.png"
+import styles from "./PageLayout.module.css"
 
-const Main = styled.main`
-  max-width: 960px;
-  margin: 60px auto;
-  min-height: 70vh;
-  padding: 100px 5% 80px;
-`;
-
-export const Heading = styled.h1`
-  color: ${props => props.color};
-`
 export default ({ children }) => (
   <div>
     <Helmet
@@ -29,6 +19,6 @@ export default ({ children }) => (
       />
     <link rel="canonical" href="https://alexandrastrekalova.com/" />
     <Header />
-    <Main>{children}</Main>
+    <main className={styles.main}>{children}</main>
   </div>
 )
