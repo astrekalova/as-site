@@ -4,6 +4,7 @@ import Header from './Header';
 
 import logo from "../images/favicon.png"
 import styles from "./PageLayout.module.css"
+import Footer from './Footer';
 
 export default ({ children }) => (
   <div>
@@ -20,5 +21,6 @@ export default ({ children }) => (
     <link rel="canonical" href="https://alexandrastrekalova.com/" />
     <Header />
     <main className={styles.main}>{children}</main>
+    <Footer />
   </div>
 )

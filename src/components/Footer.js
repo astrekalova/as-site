@@ -1,13 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { fab } from '@fortawesome/free-brands-svg-icons'
 import styles from "./Footer.module.css"
-
-import { media } from './Breakpoints'
-
-library.add(fab)
 
 const FooterLinks = [
   {
@@ -24,50 +16,33 @@ const FooterLinks = [
   },
 ]
 
-const SocialLinks = styled.ul`
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  ${media.tablet`
-      display: flex;
-      justify-content: center;
-      li + li {
-        margin-left: 20px;
-      }
-    `};
-`
-
-const SocialLink = styled.a`
-  padding: 5px 15px;
-  border-radius: 3px;
-  transition: all 0.3s ease;
-  color: #fff;
-  background-color: ${props => props.color};
-`
-const SubHeader = styled.h3`
-  text-transform: uppercase;
-  font-weight: 900;
-  margin-bottom: 25px;
-  letter-spacing: 5px;
-  text-align: center;
-  font-size: 1.17em;
-`;
-
 export default () => (
 <footer>
-    <SubHeader>You can find me here</SubHeader>
-    <SocialLinks>
-        {FooterLinks.map(link => (
-        <li key={link.name}>
-            <SocialLink
-            target="_blank"
-            rel="nofollow"
-            href={link.link}
-            >
-            <FontAwesomeIcon icon={['fab', `${link.name}`]} size="lg" />
-            </SocialLink>
-        </li>
-        ))}
-    </SocialLinks>
+    <h3 className={styles.subheader}>You can find me here</h3>
+    <ul className={styles.socialLinks}>
+      <li className={styles.socialLink} key='twitter'>
+          <a
+            href='https://twitter.com/astrekalova'
+            className={`${styles.socialLinkIcon} ${styles.twitter}`}
+          >
+            <i class={`fa fa-twitter fa-lg`}></i>
+          </a>
+      </li>
+      <li className={styles.socialLink} key='github'>
+          <a
+            href='https://github.com/astrekalova'
+            className={`${styles.socialLinkIcon} ${styles.github}`}
+          >
+            <i class={`fa fa-github fa-lg`}></i>
+          </a>
+      </li>
+      <li className={styles.socialLink} key='linkedin'>
+          <a
+            href='https://www.linkedin.com/in/alexandra-strekalova-a1a78aa6'
+            className={`${styles.socialLinkIcon} ${styles.linkedin}`}
+          >
+            <i class={`fa fa-linkedin fa-lg`}></i>
+          </a>
+      </li>
+    </ul>
 </footer>)
