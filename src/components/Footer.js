@@ -1,21 +1,6 @@
 import React from 'react'
 import styles from "./Footer.module.css"
 
-const FooterLinks = [
-  {
-    name: 'twitter',
-    link: 'https://twitter.com/astrekalova',
-    },
-  {
-    name: 'github',
-    link: 'https://github.com/astrekalova',
-  },
-  {
-    name: 'linkedin',
-    link: 'https://www.linkedin.com/in/alexandra-strekalova-a1a78aa6/',
-  },
-]
-
 export default () => (
 <footer>
     <h3 className={styles.subheader}>You can find me here</h3>
@@ -25,7 +10,7 @@ export default () => (
             href='https://twitter.com/astrekalova'
             className={`${styles.socialLinkIcon} ${styles.twitter}`}
           >
-            <i class={`fa fa-twitter fa-lg`}></i>
+            <i className={`fa fa-twitter fa-lg`}></i>
           </a>
       </li>
       <li className={styles.socialLink} key='github'>
@@ -33,7 +18,7 @@ export default () => (
             href='https://github.com/astrekalova'
             className={`${styles.socialLinkIcon} ${styles.github}`}
           >
-            <i class={`fa fa-github fa-lg`}></i>
+            <i className={`fa fa-github fa-lg`}></i>
           </a>
       </li>
       <li className={styles.socialLink} key='linkedin'>
@@ -41,7 +26,7 @@ export default () => (
             href='https://www.linkedin.com/in/alexandra-strekalova-a1a78aa6'
             className={`${styles.socialLinkIcon} ${styles.linkedin}`}
           >
-            <i class={`fa fa-linkedin fa-lg`}></i>
+            <i className={`fa fa-linkedin fa-lg`}></i>
           </a>
       </li>
     </ul>
