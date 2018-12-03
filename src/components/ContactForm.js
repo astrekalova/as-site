@@ -4,8 +4,7 @@ import styles from "./ContactForm.module.css"
 export default () => (<form
     name="contact-form"
     method="post"
-    data-netlify="true"
-    data-netlify-honeypot="bot-field"
+    netlify
     >
     <div className={styles.contactBlock}>
         <label htmlFor="name" className={styles.contactLabel}>Name</label>
@@ -19,5 +18,5 @@ export default () => (<form
         <label htmlFor="message" className={styles.contactLabel}>Message</label>
         <textarea name="message" className={styles.contactInput}/>
     </div>
-    <button className={styles.button}>Submit</button>
+    <button className={styles.button} type="submit">Submit</button>
 </form>)
