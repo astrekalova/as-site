@@ -1,6 +1,13 @@
 import React from 'react'
 import styles from "./ContactForm.module.css"
 
+function encode(data) {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  }
+  
+
 export default class Contact extends React.Component {
     constructor(props) {
       super(props);
