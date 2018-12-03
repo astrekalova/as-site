@@ -12,7 +12,9 @@ function encode(data) {
 export default class Contact extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {};
+      this.state = {
+          submitted: false
+      };
     }
   
     handleChange = e => {
@@ -32,13 +34,18 @@ export default class Contact extends React.Component {
       })
         .then(() => {
             navigateTo(form.getAttribute("action"));
-            this.setState({});
+            this.setState({submitted: true});
         })
         .catch(error => alert(error));
     };
   
     render() {
-      return (
+      return this.state.submitted ? 
+        <p className={styles.thanks}>
+            Thanks for submitting your information, I'll be in contact with you as soon as
+            possible!
+        </p>
+      : (
         <div>
           <form
             name="contact"

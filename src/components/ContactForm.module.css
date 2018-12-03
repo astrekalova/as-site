@@ -32,3 +32,12 @@
     font-weight: 900;
     color: #fff;
 }
+
+.button:hover {
+    background-color: #fff;
+    color: #0059b3;
+}
+
+.thanks {
+    margin-top: 2.5em;
+}
