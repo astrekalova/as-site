@@ -1,0 +1,34 @@
+.contactLabel {
+    display: block;
+    font-size: medium;
+}
+
+.contactBlock {
+    margin-top: 2em;
+}
+
+.contactInput {
+    padding: 12px;
+    margin: 6px 0 0 0;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    color: #000;
+    line-height: normal;
+    box-sizing: border-box;
+    border-radius: 2px;
+    width: 100%;
+}
+
+.button {
+    border: transparent solid 2px;
+    background-color: #0059b3;
+    transition: #0059b3 .1s linear;
+    font-size: 16px;
+    width: 150px;
+    height: 3em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 2em;
+    font-weight: 900;
+    color: #fff;
+}
