@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from "./ContactForm.module.css"
+import { navigateTo } from "gatsby-link";
 
 function encode(data) {
     return Object.keys(data)
