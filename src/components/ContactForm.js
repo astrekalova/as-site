@@ -33,8 +33,8 @@ export default class Contact extends React.Component {
         })
       })
         .then(() => {
-            this.setState({submitted: true});
             navigateTo(form.getAttribute("action"));
+            this.setState({submitted: true});
         })
         .catch(error => alert(error));
     };
