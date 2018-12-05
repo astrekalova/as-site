@@ -40,6 +40,14 @@
   width: 60px;
   display: block;
   background-color: #00b386;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  height: 57px;
+  width: 65px;
+  font-size: 27px;
+  padding: 11px;
 }
 
 .navigationList {
