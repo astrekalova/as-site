@@ -22,7 +22,6 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-  console.log('hello!')
 
   const template = path.resolve("src/templates/post.jsx")
 
