@@ -80,3 +80,7 @@
 .contactLink:hover {
     border-bottom: 4px solid #0059b3;
 }
+
+.blogLink:hover {
+    border-bottom: 4px solid #00b386;
+}

@@ -20,6 +20,11 @@ export default () => (
               Contact
             </Link>
           </li>
+          <li>
+            <Link className={`${styles.navigationLink} ${styles.blogLink}`} to="/blog">
+              Blog
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>)
