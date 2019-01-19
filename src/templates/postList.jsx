@@ -1,9 +1,8 @@
 import React from "react"
 import Layout from '../components/PageLayout'
-import PostLink from "../components/postLink"
+import PostLink from "../components/PostLink"
 
 const Posts = (data) => {
-  console.log(data.pageContext.edges);
   const Posts = data.pageContext.edges
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
 
