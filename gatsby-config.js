@@ -27,5 +27,14 @@ module.exports = {
         linkResolver: ({ node, key, value }) => post => `/${post.uid}`,
       },
     },
+    {
+      resolve: "gatsby-plugin-sentry",
+      options: {
+        dsn: "https://7254118222e04cd2bb449d34942160bb@sentry.io/1380371",
+        // Optional settings, see https://docs.sentry.io/clients/node/config/#optional-settings
+        environment: process.env.NODE_ENV,
+        enabled: (() => ["production", "stage"].indexOf(process.env.NODE_ENV) !== -1)()
+      }
+    }
   ],
 }

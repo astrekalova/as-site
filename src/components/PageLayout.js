@@ -1,13 +1,13 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Header from './Header';
-
+import ErrorBoundary from './ErrorBoundary'
 import logo from "../images/favicon.png"
 import styles from "./PageLayout.module.css"
 import Footer from './Footer';
 
 export default ({ children }) => (
-  <div>
+ <ErrorBoundary>
     <Helmet
       title="Alexandra Strekalova"
       meta={[
@@ -22,5 +22,5 @@ export default ({ children }) => (
     <Header />
     <main className={styles.main}>{children}</main>
     <Footer />
-  </div>
+  </ErrorBoundary>
 )
