@@ -34,9 +34,7 @@ export default class Contact extends React.Component {
       .then(() => {
         this.setState({ submitted: true });
         navigate(form.getAttribute('action'));
-        throw new Error("Error in contact form!")  
-      })
-      //.catch(error => alert(error))
+    })
   }
 
   render() {
