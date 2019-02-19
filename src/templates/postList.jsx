@@ -8,6 +8,7 @@ const Posts = (data) => {
 
   return (
     <Layout>
+      <h1>Blog posts</h1>
       <div>{Posts}</div>
     </Layout>
   )
