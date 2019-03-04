@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Alexandra Strekalova <strekalo@gmail.com>",
   "dependencies": {
+    "@sentry/browser": "^4.6.3",
     "babel-plugin-styled-components": "^1.8.0",
     "create-react-context": "^0.2.3",
     "gatsby": "^2.0.19",
