@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 import Layout from '../components/PageLayout'
 import ContactForm from '../components/ContactForm'
-import { contactColor } from '../utils/color'
+import { blue } from '../utils/color'
 
 const EmailLink = styled.span`
-  color: ${contactColor}
+  color: ${blue}
 `
 
 export default () => (

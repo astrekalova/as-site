@@ -2,19 +2,19 @@ import styled, { keyframes, css } from 'styled-components'
 
 const upDown = keyframes`
   from {
-    transform: translateY(20px);
+    transform: translateY(0);
   }
   to {
-    transform: translateY(50px);
+    transform: translateY(30px);
   }
 `
 
 const upDownWide = keyframes`
   from {
-    transform: translateY(130px);
+    transform: translateY(0);
   }
   to {
-    transform: translateY(230px);
+    transform: translateY(200px);
   }
 `
 
@@ -28,12 +28,18 @@ const upDownWideAnimation = css`
 
 export const UpDownWide = styled.div`
   animation: ${upDownWideAnimation};
-  position: relative;
-  pin: {top:0,right:0,bottom:0,left:0}
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 `
 
 export const UpDown = styled.div`
   animation: ${upDownAnimation};
-  position: relative;
-  pin: {top:0,right:0,bottom:0,left:0}
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 `

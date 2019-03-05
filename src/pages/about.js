@@ -2,10 +2,10 @@ import React from 'react'
 import styled from 'styled-components';
 
 import Layout from '../components/PageLayout'
-import { aboutColor } from '../utils/color'
+import { red } from '../utils/color'
 
 const Link = styled.span`
-  color: ${aboutColor}
+  color: ${red}
 `
 
 const SecondPage = () => (
