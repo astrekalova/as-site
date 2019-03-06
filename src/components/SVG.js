@@ -1,10 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import media from './Breakpoints'
+import { css } from 'styled-components'
+
+const hidden = css`
+  ${media.tablet`display: none;`}
+  ${media.phone`display: none;`}
+`
 
 const Wrapper = styled.svg`
   position: absolute;
   stroke: currentColor;
+  ${props => props.hiddenMobile && hidden};
   color: ${props => props.stroke};
   width: ${props => props.svgWidth};
   fill: ${props => props.fill};

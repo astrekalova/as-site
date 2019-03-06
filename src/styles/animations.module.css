@@ -1,0 +1,35 @@
+@keyframes upDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(30px);
+  }
+}
+
+@keyframes upDownWide {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(200px);
+  }
+}
+
+.upDownAnimation {
+    animation: upDown 4s ease-in-out infinite alternate;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.upDownWideAnimation {
+    animation: upDownWide 18s ease-in-out infinite alternate;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
