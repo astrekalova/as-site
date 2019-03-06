@@ -6,3 +6,4 @@ export const greyDarker = "#364349"
 export const greyDarkest = "#273238"
 
 export const white = "#ffffff"
+export const black = "#1a1a1a"

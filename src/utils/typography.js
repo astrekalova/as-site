@@ -1,15 +1,16 @@
 import Typography from "typography"
+import { white, black } from './color'
 
 const options = {
     baseFontSize: '18px',
     baseLineHeight: 1.45,
     scaleRatio: 2.25,
-    bodyColor: '#FFF',
+    bodyColor: white,
     headerFontFamily: ['Exo', 'sans-serif'],
     bodyFontFamily: ['Yrsa', 'sans-serif'],
     overrideStyles: ({ rhythm, scale }, options) => ({
       body: {
-        background: '#1a1a1a',
+        background: black,
         lineHeight: '1.5',
       },
       a: {
