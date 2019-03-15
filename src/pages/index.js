@@ -2,8 +2,7 @@ import React from 'react'
 
 import Layout from '../components/PageLayout'
 import SVG from '../components/SVG'
-import { UpDown } from '../styles/animations'
-import { UpDownWide } from '../styles/animations'
+import { UpDown, UpDownWide, Rotate } from '../styles/animations'
 import { greyDarker, greyDarkest, green, red, blue, white } from '../utils/color'
 
 const IndexPage = () => (
@@ -24,8 +23,8 @@ const IndexPage = () => (
     <SVG icon="circle" width="3rem" fill={greyDarker} left="50%" top="60%" />
     <SVG icon="upDown" width="2rem" fill={greyDarkest} left="95%" top="90%" />
     <SVG icon="upDown" hiddenMobile width="3rem" fill={greyDarker} left="40%" top="75%" />
-    <SVG icon="triangle" width="2rem" stroke={greyDarker} left="25%" top="5%" />
-    <SVG icon="box" width="1.5rem" fill={greyDarkest} left="10%" top="30%" />
+    <SVG icon="triangle" width="2rem" stroke={white} left="25%" top="13%" />
+    <SVG icon="box" width="1.5rem" fill={greyDarkest} />
     <SVG icon="hexa" width="4rem" stroke={greyDarker} left="10%" top="50%" />
     <SVG icon="hexa" width="2rem" stroke={greyDarker} left="80%" top="70%" />
     <Layout>
