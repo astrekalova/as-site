@@ -18,14 +18,14 @@ const upDownWide = keyframes`
   }
 `
 
-const rotate = keyframes`
-  0% {
+export const rotate = keyframes`
+  from {
     transform: rotate(0deg);
   }
-  25%, 100% {
+  to {
     transform: rotate(360deg);
   }
-`
+`;
 
 const upDownAnimation = css`
   ${upDown} 4s ease-in-out infinite alternate;
@@ -36,7 +36,7 @@ const upDownWideAnimation = css`
 `
 
 const rotateAnimation = css`
-  ${rotate} 3s ease-in-out infinite;
+  ${rotate} 4s linear infinite;
 `
 
 export const UpDownWide = styled.div`
@@ -59,7 +59,9 @@ export const UpDown = styled.div`
 
 export const Rotate = styled.div`
   animation: ${rotateAnimation};
+  width: 40px;
+  height: 40px;
   position: absolute;
-  top:77px;
-  left:50px;
+  left: 50px;
+  top: 230px;
 `

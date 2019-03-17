@@ -19,11 +19,13 @@ const IndexPage = () => (
       <SVG icon="upDown" hiddenMobile width="2rem" fill={greyDarkest} left="90%" top="10%" />
     </UpDownWide>
     <SVG icon="circle" hiddenMobile width="6rem" fill={greyDarker} left="2%" top="70%" />
-    <SVG icon="circle" width="1.5rem" fill={greyDarkest} left="4%" top="20%" />
+    <SVG icon="circle" width="1.5rem" fill={greyDarkest} left="2%" top="20%" />
     <SVG icon="circle" width="3rem" fill={greyDarker} left="50%" top="60%" />
     <SVG icon="upDown" width="2rem" fill={greyDarkest} left="95%" top="90%" />
     <SVG icon="upDown" hiddenMobile width="3rem" fill={greyDarker} left="40%" top="75%" />
-    <SVG icon="triangle" width="2rem" stroke={white} left="25%" top="13%" />
+    <Rotate>
+      <SVG icon="triangle" width="2rem" stroke={white} />
+    </Rotate>
     <SVG icon="box" width="1.5rem" fill={greyDarkest} />
     <SVG icon="hexa" width="4rem" stroke={greyDarker} left="10%" top="50%" />
     <SVG icon="hexa" width="2rem" stroke={greyDarker} left="80%" top="70%" />
