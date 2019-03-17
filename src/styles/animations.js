@@ -63,5 +63,5 @@ export const Rotate = styled.div`
   height: 40px;
   position: absolute;
   left: 50px;
-  top: 230px;
+  top: 100px;
 `
