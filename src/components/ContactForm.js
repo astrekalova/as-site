@@ -22,22 +22,30 @@ export default class Contact extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault()
-    const form = e.target
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...this.state,
-      }),
-    })
-      .then(() => {
-        this.setState({ submitted: true });
-        navigate(form.getAttribute('action'));
-    })
+    if (this.state.email) {
+      const form = e.target
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({
+          'form-name': form.getAttribute('name'),
+          ...this.state,
+        }),
+      })
+        .then(() => {
+          this.setState({ submitted: true });
+          navigate(form.getAttribute('action'));
+      })
+    } else {
+      this.setState({ emailWarning: true });
+    }
   }
 
   render() {
+    const missingEmailWarning = this.state.emailWarning 
+      ? <label className={styles.warning}>Please, fill out the email</label> 
+      : null;
+    
     return this.state.submitted ? (
       <p className={styles.thanks}>
         Thanks for submitting your information, I'll be in contact with you as
@@ -74,6 +82,9 @@ export default class Contact extends React.Component {
           <div className={styles.contactBlock}>
             <label htmlFor="email" className={styles.contactLabel}>
               Email
+            </label>
+            <label className={styles.warning}>
+              {missingEmailWarning}
             </label>
             <input
               name="email"
