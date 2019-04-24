@@ -35,6 +35,20 @@ module.exports = {
         environment: process.env.NODE_ENV,
         enabled: (() => ["production", "stage"].indexOf(process.env.NODE_ENV) !== -1)()
       }
+    },
+    {
+      resolve: 'gatsby-plugin-netlify',
+      options: {
+        headers: {
+          '/*': [
+            'X-Frame-Options: DENY',
+            'X-XSS-Protection: 1; mode=block',
+            'X-Content-Type-Options: nosniff',
+            `Content-Security-Policy: frame-ancestors 'self'`,
+            'Referrer-Policy: no-referrer-when-downgrade'
+          ]
+        }
+      }
     }
   ],
 }
