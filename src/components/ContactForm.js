@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './ContactForm.module.css'
+import styled from 'styled-components';
 import { navigate } from 'gatsby-link'
 
 function encode(data) {
@@ -47,12 +47,12 @@ export default class Contact extends React.Component {
       : null;
     
     return this.state.submitted ? (
-      <p className={styles.thanks}>
+      <ThanksBlock>
         Thanks for submitting your information, I'll be in contact with you as
         soon as possible!
-      </p>
+      </ThanksBlock>
     ) : (
-      <div>
+      <Form>
         <form
           name="contact"
           method="post"
@@ -68,19 +68,19 @@ export default class Contact extends React.Component {
               <input name="bot-field" onChange={this.handleChange} />
             </label>
           </p>
-          <div className={styles.contactBlock}>
-            <label htmlFor="name" className={styles.contactLabel}>
+          <div className={contactBlock}>
+            <label htmlFor="name" className={contactLabel}>
               Name
             </label>
             <input
               name="name"
-              className={styles.contactInput}
+              className={contactInput}
               type="text"
               onChange={this.handleChange}
             />
           </div>
-          <div className={styles.contactBlock}>
-            <label htmlFor="email" className={styles.contactLabel}>
+          <div className={contactBlock}>
+            <label htmlFor="email" className={contactLabel}>
               Email
             </label>
             <label className={styles.warning}>
@@ -88,26 +88,76 @@ export default class Contact extends React.Component {
             </label>
             <input
               name="email"
-              className={styles.contactInput}
+              className={contactInput}
               type="email"
               onChange={this.handleChange}
             />
           </div>
-          <div className={styles.contactBlock}>
-            <label htmlFor="message" className={styles.contactLabel}>
+          <div className={contactBlock}>
+            <label htmlFor="message" className={contactLabel}>
               Message
             </label>
             <textarea
               name="message"
-              className={styles.contactInput}
+              className={contactInput}
               onChange={this.handleChange}
             />
           </div>
-          <button className={styles.button} type="submit">
+          <button className={button} type="submit">
             Submit
           </button>
         </form>
-      </div>
+      </Form>
     )
   }
 }
+
+const ThanksBlock = styled.p`
+  margin-top: 2.5em;
+`
+
+const Form = styled.div`
+  .contactBlock {
+    margin-top: 2em;
+  }
+
+  .contactLabel {
+    display: block;
+    font-size: medium;
+  }
+
+  .contactInput {
+    padding: 12px;
+    margin: 6px 0 0 0;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    color: #000;
+    line-height: normal;
+    box-sizing: border-box;
+    border-radius: 2px;
+    width: 100%;
+  }
+
+  .warning {
+    color: #b3002d;
+  }
+
+  .button {
+    border: transparent solid 2px;
+    background-color: #0059b3;
+    transition: #0059b3 .1s linear;
+    font-size: 16px;
+    width: 150px;
+    height: 3em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 2em;
+    font-weight: 900;
+    color: #fff;
+}
+
+  .button:hover {
+      background-color: #fff;
+      color: #0059b3;
+  }
+`
