@@ -5,23 +5,23 @@ import styled from 'styled-components';
 export default () => (
     <Header>
       <Link to="/">
-        <span className={logo}>AS</span>
-        <h1 className={name}>Alexandra Strekalova</h1>
+        <span className="logo">AS</span>
+        <h1 className="name">Alexandra Strekalova</h1>
       </Link>
       <nav>
-        <ul className={navigationList}>
-          <li className={navigationListItem}>
-            <Link className={`${navigationLink} ${aboutLink}`} to="/about">
+        <ul className="navigationList">
+          <li className="navigationListItem">
+            <Link className={`navigationLink aboutLink`} to="/about">
               About
             </Link>
           </li>
           <li>
-            <Link className={`${navigationLink} ${contactLink}`} to="/contact">
+            <Link className={`navigationLink contactLink`} to="/contact">
               Contact
             </Link>
           </li>
           <li>
-            <Link className={`${navigationLink} ${blogLink}`} to="/blog">
+            <Link className={`{navigationLink blogLink`} to="/blog">
               Blog
             </Link>
           </li>

@@ -43,7 +43,7 @@ export default class Contact extends React.Component {
 
   render() {
     const missingEmailWarning = this.state.emailWarning 
-      ? <label className={styles.warning}>Please, fill out the email</label> 
+      ? <label className="warning">Please, fill out the email</label> 
       : null;
     
     return this.state.submitted ? (
@@ -68,42 +68,42 @@ export default class Contact extends React.Component {
               <input name="bot-field" onChange={this.handleChange} />
             </label>
           </p>
-          <div className={contactBlock}>
-            <label htmlFor="name" className={contactLabel}>
+          <div className="contactBlock">
+            <label htmlFor="name" className="contactLabel">
               Name
             </label>
             <input
               name="name"
-              className={contactInput}
+              className="contactInput"
               type="text"
               onChange={this.handleChange}
             />
           </div>
-          <div className={contactBlock}>
-            <label htmlFor="email" className={contactLabel}>
+          <div className="contactBlock">
+            <label htmlFor="email" className="contactLabel">
               Email
             </label>
-            <label className={styles.warning}>
+            <label className="warning">
               {missingEmailWarning}
             </label>
             <input
               name="email"
-              className={contactInput}
+              className="contactInput"
               type="email"
               onChange={this.handleChange}
             />
           </div>
-          <div className={contactBlock}>
-            <label htmlFor="message" className={contactLabel}>
+          <div className="contactBlock">
+            <label htmlFor="message" className="contactLabel">
               Message
             </label>
             <textarea
               name="message"
-              className={contactInput}
+              className="contactInput"
               onChange={this.handleChange}
             />
           </div>
-          <button className={button} type="submit">
+          <button className="button" type="submit">
             Submit
           </button>
         </form>

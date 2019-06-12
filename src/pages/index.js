@@ -5,8 +5,6 @@ import SVG from '../components/SVG'
 import { UpDown, UpDownWide, Rotate } from '../styles/animations'
 import { greyDarker, greyDarkest, green, red, blue, white } from '../utils/color'
 
-import styled from 'styled-components'
-
 const IndexPage = () => (
   <>
     <UpDown from="0" to="30px">
