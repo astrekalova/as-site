@@ -3,8 +3,8 @@ import Helmet from 'react-helmet';
 import Header from './Header';
 import ErrorBoundary from './ErrorBoundary'
 import logo from "../images/favicon.png"
-import styles from "./PageLayout.module.css"
 import Footer from './Footer';
+import styled from 'styled-components';
 
 export default ({ children }) => (
  <ErrorBoundary>
@@ -20,7 +20,14 @@ export default ({ children }) => (
       />
     <link rel="canonical" href="https://alexandrastrekalova.com/" />
     <Header />
-    <main className={styles.main}>{children}</main>
+    <Content>{children}</Content>
     <Footer />
   </ErrorBoundary>
 )
+
+const Content = styled.main`
+  max-width: 960px;
+  margin: 60px auto;
+  min-height: 70vh;
+  padding: 100px 5% 80px;
+`;
