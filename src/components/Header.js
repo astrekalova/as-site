@@ -21,7 +21,7 @@ export default () => (
             </Link>
           </li>
           <li>
-            <Link className={`{navigationLink blogLink`} to="/blog">
+            <Link className={`navigationLink blogLink`} to="/blog">
               Blog
             </Link>
           </li>
