@@ -44,8 +44,7 @@ module.exports = {
             'X-Frame-Options: DENY',
             'X-XSS-Protection: 1; mode=block',
             'X-Content-Type-Options: nosniff',
-            `Content-Security-Policy: script-src 'self'`,
-            'Referrer-Policy: no-referrer-when-downgrade'
+            `Content-Security-Policy:  default-src 'none'; connect-src 'self' https://alexandrastrekalova.com; frame-src https://www.youtube.com; script-src 'self' 'unsafe-inline'; style-src 'unsafe-inline' `,
           ]
         }
       }
