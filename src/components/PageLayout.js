@@ -21,7 +21,7 @@ export default ({ children }) => (
     <link rel="canonical" href="https://alexandrastrekalova.com/" />
     <Header />
     <Content>{children}</Content>
-
+    <Footer />
   </ErrorBoundary>
 )
 
