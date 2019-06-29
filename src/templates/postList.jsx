@@ -5,9 +5,8 @@ import PostLink from "../components/PostLink"
 const Posts = (data) => {
   const Posts = data.pageContext.edges
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
-
   return (
-    <Layout>
+    <Layout {...data}>
       <h1>Blog posts</h1>
       <div>{Posts}</div>
     </Layout>

@@ -6,7 +6,7 @@ import logo from "../images/favicon.png"
 import Footer from './Footer';
 import styled from 'styled-components';
 
-export default ({ children }) => (
+export default ({ location, children }) => (
  <ErrorBoundary>
     <Helmet
       title="Alexandra Strekalova"
@@ -19,7 +19,7 @@ export default ({ children }) => (
       ]}
       />
     <link rel="canonical" href="https://alexandrastrekalova.com/" />
-    <Header />
+    <Header location={location} />
     <Content>{children}</Content>
     <Footer />
   </ErrorBoundary>

@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components';
+import { green, red, blue } from '../utils/color';
 
-export default () => (
+export default ({ location }) => (
     <Header>
       <Link to="/">
-        <span className="logo">AS</span>
+        <Logo page={location.pathname.replace('/', '')}>AS</Logo>
         <h1 className="name">Alexandra Strekalova</h1>
       </Link>
       <nav>
@@ -114,4 +115,25 @@ const Header = styled.header`
   .blogLink:hover {
       border-bottom: 4px solid #00b386;
   }
+`;
+
+const Logo = styled.span`
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 1px;
+  background: ${(props) => {
+    if (props.page === 'about') return '#b3002d';
+    if (props.page === 'contact') return '#0059b3';
+    if (props.page.includes('blog')) return '#00b386';
+    return '#f1c40f';
+  }};
+  color: #111;
+  padding: 10px;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  font-size: 26px;
+  height: 52px;
+  width: 59px;
+  display: block;
 `;

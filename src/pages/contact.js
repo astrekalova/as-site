@@ -9,10 +9,14 @@ const EmailLink = styled.span`
   color: ${blue}
 `
 
-export default () => (
-  <Layout>
-      <h1>Contact</h1>
-      <p>Fill out the form below or <a href="mailto:strekalo@gmail.com"><EmailLink>email</EmailLink></a> me, I'd love to talk!</p>
-      <ContactForm />
-  </Layout>
-)
+export default class ContactPage extends React.Component {
+  render() {
+    return (
+      <Layout {...this.props}>
+        <h1>Contact</h1>
+        <p>Fill out the form below or <a href="mailto:strekalo@gmail.com"><EmailLink>email</EmailLink></a> me, I'd love to talk!</p>
+        <ContactForm />
+      </Layout>
+    )
+  }
+}

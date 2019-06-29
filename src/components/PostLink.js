@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const PostLink = ({ post }) => (
   <BlogEntry>
-    <Link to={post.uid} className="blogHeading">
+    <Link to={`blog/${post.uid}`} className="blogHeading">
       <h2>{post.data.title.text}</h2>
       <p>{post.data.date}</p>
       <p>{post.data.content.raw[0].text.substring(0,100) + ' ...'}</p>
