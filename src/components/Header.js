@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components';
-import { green, red, blue } from '../utils/color';
+import { green, red, blue, yellow, black, white } from '../utils/color';
 
 export default ({ location }) => (
     <Header>
@@ -31,7 +31,7 @@ export default ({ location }) => (
     </Header>)
 
 const Header = styled.header`
-  background: #1a1a1a;
+  background: ${black};
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -56,30 +56,6 @@ const Header = styled.header`
     color:#FFF;
     transition: 0.3s all cubic-bezier(0.895, 0.03, 0.685, 0.22);
   }
-  
-  .logo {
-    text-transform: uppercase;
-    font-weight: 900;
-    letter-spacing: 1px;
-    color: #111;
-    padding: 10px;
-    position: relative;
-    z-index: 10;
-    overflow: hidden;
-    font-size: 26px;
-    height: 52px;
-    width: 60px;
-    display: block;
-    background-color: #00b386;
-    transition: all 0.3s ease;
-  }
-
-  .logo:hover {
-    height: 57px;
-    width: 65px;
-    font-size: 27px;
-    padding: 11px;
-  }
 
   .navigationList {
     list-style: none;
@@ -94,7 +70,7 @@ const Header = styled.header`
 
   .navigationLink {
     text-decoration: none;
-    color: #fff;
+    color: ${white};
     font-size: 18px;
     padding: 15px 10px 18px;
     font-weight: 900;
@@ -105,15 +81,15 @@ const Header = styled.header`
 }
 
   .aboutLink:hover {
-      border-bottom: 4px solid #b3002d;
+      border-bottom: 4px solid ${red};
   }
 
   .contactLink:hover {
-      border-bottom: 4px solid #0059b3;
+      border-bottom: 4px solid ${blue};
   }
 
   .blogLink:hover {
-      border-bottom: 4px solid #00b386;
+      border-bottom: 4px solid ${green};
   }
 `;
 
@@ -122,12 +98,12 @@ const Logo = styled.span`
   font-weight: 900;
   letter-spacing: 1px;
   background: ${(props) => {
-    if (props.page === 'about') return '#b3002d';
-    if (props.page === 'contact') return '#0059b3';
-    if (props.page.includes('blog')) return '#00b386';
-    return '#f1c40f';
+    if (props.page === 'about') return `${red}`;
+    if (props.page === 'contact') return `${blue}`;
+    if (props.page.includes('blog')) return `${green}`;
+    return `${yellow}`;
   }};
-  color: #111;
+  color: ${black};
   padding: 10px;
   position: relative;
   z-index: 10;

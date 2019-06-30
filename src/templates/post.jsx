@@ -2,9 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from '../components/PageLayout'
 
-//const Post = ({ data: { prismicBlogpost } }) => {
 const Post = (data) => {
-  console.log(data);
   const blogPost = data.data.prismicBlogpost.data;
   const url = blogPost.embedded_link.embed_url
     ? <iframe width="560" height="315" 

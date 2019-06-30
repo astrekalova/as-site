@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import { navigate } from 'gatsby-link'
+import { grey, greyLighter, black, blue, white, red } from '../utils/color'
 
 function encode(data) {
   return Object.keys(data)
@@ -129,9 +130,9 @@ const Form = styled.div`
   .contactInput {
     padding: 12px;
     margin: 6px 0 0 0;
-    border: 1px solid #ccc;
-    background: #fafafa;
-    color: #000;
+    border: 1px solid ${grey};
+    background: ${greyLighter};
+    color: ${black};
     line-height: normal;
     box-sizing: border-box;
     border-radius: 2px;
@@ -139,13 +140,13 @@ const Form = styled.div`
   }
 
   .warning {
-    color: #b3002d;
+    color: ${red};
   }
 
   .button {
     border: transparent solid 2px;
-    background-color: #0059b3;
-    transition: #0059b3 .1s linear;
+    background-color: ${blue};
+    transition: ${blue} .1s linear;
     font-size: 16px;
     width: 150px;
     height: 3em;
@@ -153,11 +154,11 @@ const Form = styled.div`
     letter-spacing: 2px;
     margin-top: 2em;
     font-weight: 900;
-    color: #fff;
+    color: ${white};
 }
 
   .button:hover {
-      background-color: #fff;
-      color: #0059b3;
+      background-color: ${white};
+      color: ${blue};
   }
 `

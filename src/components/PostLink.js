@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from 'styled-components';
+import { white, greyDarkest } from '../utils/color';
 
 const PostLink = ({ post }) => (
   <BlogEntry>
@@ -15,11 +16,11 @@ const PostLink = ({ post }) => (
 export default PostLink
 
 const BlogEntry = styled.div`
-  background: #333333;
+  background: ${greyDarkest};
   padding: 30px;
   margin: 30px;
 
   .blogHeading {
-    color:#FFF;
+    color: ${white};
   }
 `;
