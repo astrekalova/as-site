@@ -1,34 +1,80 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components';
 import { green, red, blue, yellow, black, white } from '../utils/color';
+import media from './Breakpoints';
+import { FaBars, FaClose } from 'react-icons/lib/fa';
 
-export default ({ location }) => (
+export default ({ location }) => {
+  return (
     <Header>
       <Link to="/">
         <Logo page={location.pathname.replace('/', '')}>AS</Logo>
         <h1 className="name">Alexandra Strekalova</h1>
       </Link>
-      <nav>
-        <ul className="navigationList">
-          <li className="navigationListItem">
-            <Link className={`navigationLink aboutLink`} to="/about">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link className={`navigationLink contactLink`} to="/contact">
-              Contact
-            </Link>
-          </li>
-          <li>
-            <Link className={`navigationLink blogLink`} to="/blog">
-              Blog
-            </Link>
-          </li>
-        </ul>
-      </nav>
-    </Header>)
+      <ResponsiveMenu />
+    </Header>
+    )
+}
+
+const ResponsiveMenu = () => {
+  const [showMenu, setShowMenu] = useState(false);
+  return (
+    <nav>
+      <LargeMenu>
+        <Menu /> 
+      </LargeMenu>
+      <SmallMenu> 
+          {!showMenu ? (
+            <MenuIcon onClick={() => setShowMenu(!showMenu)} icon={<FaBars size={30} />} />
+          ) : (
+            <MenuIcon onClick={() => setShowMenu(!showMenu)} icon={<FaClose size={30} />} />
+          )}
+        {showMenu ? <Menu /> : null}
+      </SmallMenu>
+    </nav>
+  )
+}
+
+const Menu = () => (
+  <ul className="navigationList">
+    <li className="navigationListItem">
+      <Link className={`navigationLink aboutLink`} to="/about">
+        About
+      </Link>
+    </li>
+    <li>
+      <Link className={`navigationLink contactLink`} to="/contact">
+        Contact
+      </Link>
+    </li>
+    <li>
+      <Link className={`navigationLink blogLink`} to="/blog">
+        Blog
+      </Link>
+    </li>
+  </ul>
+);
+
+const MenuIcon = ({ onClick, icon }) => (
+  <div role="button" onClick={onClick}>
+    {icon}
+  </div>
+);
+
+const LargeMenu = styled.div`
+  display: block;
+  @media (max-width: 576px) {
+    display: none;
+  }
+`
+
+const SmallMenu = styled.div`
+  display: none;
+  @media (max-width: 576px) {
+    display: block;
+  }
+`
 
 const Header = styled.header`
   background: ${black};
